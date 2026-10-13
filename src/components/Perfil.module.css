@@ -1,0 +1,277 @@
+/* AZUL ESCURO #1a3a5c */
+.contenedor {
+  max-width: 440px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 24px;
+  padding: 40px 36px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  border: 1.5px solid #1a3a5c;
+  
+}
+
+.titulo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin: 0 0 28px 0;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+/* AVATAR */
+.avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  cursor: pointer;
+}
+
+.avatarImg {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #1a3a5c;
+  box-shadow: 0 4px 16px rgba(26,58,92,0.25);
+  transition: opacity 0.2s;
+}
+.avatarImg:hover { opacity: 0.85; }
+
+.avatarPlaceholder {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: #eef3f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border: 4px solid #1a3a5c;
+  box-shadow: 0 4px 16px rgba(26,58,92,0.2);
+  transition: background 0.2s;
+}
+.avatarPlaceholder:hover { background: #dde9f5; }
+
+.avatarLabel {
+  font-size: 0.78rem;
+  color: #1a3a5c;
+  font-weight: 600;
+}
+
+/* FORMULARIO */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #bbb;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input {
+  padding: 12px 16px;
+  border: 1.5px solid #efefef;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  outline: none;
+  font-family: inherit;
+  color: #1a1a2e;
+  background: #f7f7fb;
+  transition: border-color 0.2s, background 0.2s;
+}
+.input:focus {
+  border-color: #1a3a5c;
+  background: white;
+}
+.input:disabled {
+  background: #f0f0f5;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+/* MENSAJES */
+.mensaje {
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 10px 14px;
+  border-radius: 10px;
+  margin: 0;
+}
+.exito {
+  background: #eef8f5;
+  color: #1a7a5a;
+  border: 1px solid #b2e8d4;
+}
+.error {
+  background: #fff0ee;
+  color: #e8624a;
+  border: 1px solid #ffc8be;
+}
+
+/* BOTÓN */
+.btnGuardar {
+  background: linear-gradient(135deg, #1a3a5c 0%, #0f2540 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+  font-family: inherit;
+  box-shadow: 0 4px 16px rgba(26,58,92,0.3);
+  margin-top: 4px;
+}
+.btnGuardar:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+.btnGuardar:disabled {
+  background: #ddd;
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.checkboxGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.seccionDependientes {
+  margin-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 1.5rem;
+}
+
+.subtitulo {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.formDependiente {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.sinDependientes {
+  text-align: center;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.listaDependientes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dependienteItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+
+.dependienteInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dependienteIcono {
+  font-size: 1.2rem;
+}
+
+.dependienteNombre {
+  font-weight: 500;
+  font-size: 0.9rem;
+  display: block;
+}
+
+.dependienteFecha {
+  font-size: 0.78rem;
+  color: #888;
+  display: block;
+}
+
+.btnEliminarDep {
+  background: none;
+  border: 1px solid #e53e3e;
+  color: #e53e3e;
+  border-radius: 8px;
+  padding: 0.3rem 0.65rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.btnEliminarDep:hover {
+  background: #fff5f5;
+}
+
+.seccionPeligro {
+  margin-top: 2rem;
+  border-top: 1px solid #fed7d7;
+  padding-top: 1.5rem;
+}
+
+.subtituloPeligro {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e53e3e;
+  margin-bottom: 0.5rem;
+}
+
+.advertencia {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.btnEliminarCuenta {
+  background: none;
+  border: 1.5px solid #e53e3e;
+  color: #e53e3e;
+  border-radius: 8px;
+  padding: 0.65rem 1.25rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btnEliminarCuenta:hover {
+  background: #fff5f5;
+}
