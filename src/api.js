@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'https://travelapp-backend-61b8.onrender.com'
+ baseURL: import.meta.env.VITE_API_URL || 'https://travelus-backend.onrender.com'
 })
 
 api.interceptors.request.use((config) => {
