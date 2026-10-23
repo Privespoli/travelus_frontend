@@ -16,7 +16,7 @@ function PerfilPage() {
     <div className={styles.pagina}>
 
       <header className={styles.header}>
-        <span className={styles.logo}>✈ TravelApp</span>
+        <span className={styles.logo}><img src="/logo-512.png" alt="" width="32" height="32" /> Travel us</span>
         <div className={styles.headerDerecha}>
           <button className={styles.btnVolver} onClick={() => navigate('/dashboard')}>
             ← Volver
@@ -33,7 +33,7 @@ function PerfilPage() {
 
       <footer className={styles.footer}>
         <div className={styles.footerContenido}>
-          <div className={styles.footerLogo}>✈ TravelApp</div>
+          <div className={styles.footerLogo}><img src="/logo-512.png" alt="" width="32" height="32" /> Travel us</div>
           <div className={styles.footerLinks}>
             <span className={styles.footerLink}>Sobre nosotros</span>
             <span className={styles.footerLink}>Contacto</span>

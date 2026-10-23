@@ -1,10 +1,10 @@
-# ✈️ TravelApp
+# ✈️ Travelus
 
 > Aplicación web para la gestión de viajes en grupo. Organiza, comparte y planifica tus viajes con tus compañeros de aventura.
 
-![TravelApp](https://img.shields.io/badge/status-producción-brightgreen) ![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js) ![React](https://img.shields.io/badge/React-Vite-61DAFB?logo=react) ![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E?logo=supabase) ![Vercel](https://img.shields.io/badge/Frontend-Vercel-black?logo=vercel) ![Render](https://img.shields.io/badge/Backend-Render-46E3B7?logo=render)
+![Travelus](https://img.shields.io/badge/status-producción-brightgreen) ![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js) ![React](https://img.shields.io/badge/React-Vite-61DAFB?logo=react) ![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E?logo=supabase) ![Vercel](https://img.shields.io/badge/Frontend-Vercel-black?logo=vercel) ![Render](https://img.shields.io/badge/Backend-Render-46E3B7?logo=render)
 
-🌐 **Demo en vivo:** [travelapp-frontend-pi.vercel.app](https://travelapp-frontend-pi.vercel.app)
+🌐 **Demo en vivo:** [travelus-frontend.vercel.app](https://travelus-frontend.vercel.app)
 
 ---
 
@@ -26,7 +26,7 @@
 
 ## 🌍 Sobre el proyecto
 
-TravelApp es una aplicación fullstack desarrollada como proyecto final de bootcamp. Permite a los usuarios crear viajes, invitar a otros participantes y gestionar toda la información del viaje de forma colaborativa: tickets, documentos, itinerario, puntos de interés y mucho más.
+Travelus es una aplicación fullstack desarrollada como proyecto final de bootcamp. Permite a los usuarios crear viajes, invitar a otros participantes y gestionar toda la información del viaje de forma colaborativa: tickets, documentos, itinerario, puntos de interés y mucho más.
 
 ---
 
@@ -123,8 +123,8 @@ El backend actúa como intermediario entre el frontend y Supabase, usando la **s
 ### Backend
 
 ```bash
-git clone https://github.com/melinarivera/travelapp_backend.git
-cd travelapp_backend
+git clone https://github.com/Privespoli/travelus_backend.git
+cd travelus_backend
 npm install
 cp .env.example .env
 npm run dev
@@ -133,8 +133,8 @@ npm run dev
 ### Frontend
 
 ```bash
-git clone https://github.com/melinarivera/travelapp_frontend.git
-cd travelapp_frontend
+git clone https://github.com/Privespoli/travelus_frontend.git
+cd travelus_frontend
 npm install
 npm run dev
 ```
@@ -162,7 +162,7 @@ Las credenciales de EmailJS están configuradas en el componente `ContactForm.js
 
 ### Backend
 ```
-travelapp_backend/
+travelus_backend/
 ├── index.js
 └── src/
     ├── controllers/
@@ -189,7 +189,7 @@ travelapp_backend/
 
 ### Frontend
 ```
-travelapp_frontend/
+travelus_frontend/
 └── src/
     ├── pages/
     │   ├── AuthPage.jsx
@@ -246,8 +246,8 @@ Todas las tablas tienen **Row Level Security (RLS)** activado en Supabase. El ba
 
 | Servicio | Plataforma | URL |
 |---------|-----------|-----|
-| Frontend | Vercel | [travelapp-frontend-pi.vercel.app](https://travelapp-frontend-pi.vercel.app) |
-| Backend | Render | [travelapp-backend-61b8.onrender.com](https://travelapp-backend-61b8.onrender.com) |
+| Frontend | Vercel | [travelus-frontend.vercel.app](https://travelus-frontend.vercel.app) |
+| Backend | Render | [travelus-backend.onrender.com](https://travelus-backend.onrender.com) |
 
 > **Nota:** El backend usa el plan gratuito de Render, que se "duerme" tras 15 minutos de inactividad. El primer request puede tardar ~50 segundos en responder.
 
