@@ -103,7 +103,7 @@ function ViajePage() {
             <span className={styles.footerLink}>Condiciones de uso</span>
             <span className={styles.footerLink}>Privacidad</span>
           </div>
-          <p className={styles.footerCopy}>© 2026 Priscila & Melina. Todos los derechos reservados.</p>
+          <p className={styles.footerCopy}>© 2026 Priscila Nunes. Todos los derechos reservados.</p>
         </div>
       </footer>
     </div>
