@@ -39,7 +39,7 @@ function AuthPage() {
 
       {/* NAVBAR */}
       <nav className={styles.navbar}>
-        <span className={styles.navLogo}><img src="/logo-512.png" alt="" width="32" height="32" /> Travel us</span>
+        <span className={styles.navLogo}><img src="/travelus-globe.png" alt="" width="32" height="32" /><span className={styles.brandText}>Travel Us</span></span>
         <div className={styles.navLinks}>
           <a href="#sobre-nosotros" className={styles.navLink}>Sobre nosotros</a>
           <a href="#contacto" className={styles.navLink}>Contacto</a>
@@ -81,10 +81,10 @@ function AuthPage() {
       {/* SOBRE NOSOTROS */}
       <section id="sobre-nosotros" className={styles.sobreNosotros}>
         <div className={styles.sobreContenido}>
-          <span className={styles.badge}>¿Qué es Travel us?</span>
+          <span className={styles.badge}>¿Qué es Travel Us?</span>
           <h2 className={styles.sobreTitulo}>Organiza tu viaje en grupo,<br/>sin el caos</h2>
           <p className={styles.sobreTexto}>
-            Travel us es la plataforma para organizar viajes en grupo de forma sencilla y sin estrés.
+            Travel Us es la plataforma para organizar viajes en grupo de forma sencilla y sin estrés.
             Coordina itinerarios, comparte documentos, sugiere puntos de interés y vota con tu grupo —
             todo en un mismo lugar.
           </p>
@@ -129,7 +129,7 @@ function AuthPage() {
       {/* FOOTER */}
       <footer className={styles.footer}>
         <div className={styles.footerContenido}>
-          <div className={styles.footerLogo}><img src="/logo-512.png" alt="" width="32" height="32" /> Travel us</div>
+          <div className={styles.footerLogo}><img src="/travelus-globe.png" alt="" width="32" height="32" /><span className={styles.brandText}>Travel Us</span></div>
           <div className={styles.footerLinks}>
             <a href="#sobre-nosotros" className={styles.footerLink}>Sobre nosotros</a>
             <a href="#contacto" className={styles.footerLink}>Contacto</a>

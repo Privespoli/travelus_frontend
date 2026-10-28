@@ -114,3 +114,4 @@
   .header { padding: 14px 20px; }
   .footer { padding: 28px 20px; }
 }
+.brandText { background: linear-gradient(90deg, #2EBD8A 0%, #F0A020 25%, #1a3a5c 50%, #e8624a 75%, #7c5cbf 100%); background-clip: text; -webkit-background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }

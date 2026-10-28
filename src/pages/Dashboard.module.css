@@ -190,3 +190,4 @@
   object-fit: cover;
   border: 2px solid #e0e0e0;
 }
+.brandText { background: linear-gradient(90deg, #2EBD8A 0%, #F0A020 25%, #1a3a5c 50%, #e8624a 75%, #7c5cbf 100%); background-clip: text; -webkit-background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }

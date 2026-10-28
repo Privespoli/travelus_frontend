@@ -42,7 +42,7 @@ function Dashboard() {
     <div className={styles.pagina}>
  
       <header className={styles.header}>
-        <h1 className={styles.logo}><img src="/logo-512.png" alt="" width="32" height="32" /> Travel us</h1>
+        <h1 className={styles.logo}><img src="/travelus-globe.png" alt="" width="32" height="32" /><span className={styles.brandText}>Travel Us</span></h1>
         <div className={styles.headerDerecha}>
           <div className={styles.usuarioInfo}>
             {perfil?.foto_url && (
@@ -89,7 +89,7 @@ function Dashboard() {
  
       <footer className={styles.footer}>
         <div className={styles.footerContenido}>
-          <div className={styles.footerLogo}><img src="/logo-512.png" alt="" width="32" height="32" /> Travel us</div>
+          <div className={styles.footerLogo}><img src="/travelus-globe.png" alt="" width="32" height="32" /><span className={styles.brandText}>Travel Us</span></div>
           <div className={styles.footerLinks}>
             <span className={styles.footerLink}>Sobre nosotros</span>
             <span className={styles.footerLink}>Contacto</span>
