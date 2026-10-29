@@ -14,10 +14,10 @@ function ContactForm() {
     setError(null)
     try {
       await emailjs.sendForm(
-  'service_xh7k7yy',
-  'template_hasnv2p',
+  'service_7otjpsh',
+  'template_21o3vu5',
   formRef.current,
-  '_gDSIJLsB3IcrjGgw'
+  'b9bC287bKmzbJB3OE'
 )
       setEnviado(true)
 formRef.current.reset()
