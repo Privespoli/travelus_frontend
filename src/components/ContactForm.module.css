@@ -39,6 +39,7 @@
   background: #fafafa;
   width: 100%;
   box-sizing: border-box;
+  color: #1a1a1a;
 }
 
 .input:focus {
@@ -57,6 +58,7 @@
   background: #fafafa;
   resize: none;
   min-height: 80px;
+  color: #1a1a1a;
 }
 
 .textarea:focus {
