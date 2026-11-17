@@ -5,6 +5,10 @@ Aplicación web para planificar viajes en grupo y coordinar la información del 
 🌐 **Aplicación:** [travelus-pri.vercel.app](https://travelus-pri.vercel.app)  
 🔌 **API:** [travelus-backend.onrender.com](https://travelus-backend.onrender.com)
 
+![Vista general de Travel Us: viajes, documentos, itinerario y puntos de interés](docs/images/front.png)
+
+![Vista general de Travel Us: viajes, documentos, itinerario y puntos de interés](docs/images/travelus-mosaic.png)
+
 ## Sobre el proyecto
 
 Travel Us es una aplicación fullstack. El frontend presenta las páginas y los módulos de cada viaje; el backend expone una API para autenticar solicitudes y gestionar los datos. Supabase proporciona autenticación, base de datos PostgreSQL y almacenamiento de archivos.
