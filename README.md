@@ -5,13 +5,9 @@ Aplicación web para planificar viajes en grupo y coordinar la información del 
 🌐 **Aplicación:** [travelus-pri.vercel.app](https://travelus-pri.vercel.app)  
 🔌 **API:** [travelus-backend.onrender.com](https://travelus-backend.onrender.com)
 
-<<<<<<< HEAD
 ![Vista general de Travel Us: viajes, documentos, itinerario y puntos de interés](docs/images/front.png)
 
 ![Vista general de Travel Us: viajes, documentos, itinerario y puntos de interés](docs/images/travelus-mosaic.png)
-=======
-![Pantalla de inicio de Travel Us](docs/images/front.png)
->>>>>>> 5e7b3f4 (read me)
 
 ## Sobre el proyecto
 
