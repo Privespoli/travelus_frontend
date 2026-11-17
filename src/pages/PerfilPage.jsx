@@ -1,5 +1,5 @@
 import { useAuth } from '../context/AuthContext'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Perfil from '../components/Perfil'
 import styles from './PerfilPage.module.css'
 
@@ -37,8 +37,8 @@ function PerfilPage() {
           <div className={styles.footerLinks}>
             <span className={styles.footerLink}>Sobre nosotros</span>
             <span className={styles.footerLink}>Contacto</span>
-            <span className={styles.footerLink}>Condiciones de uso</span>
-            <span className={styles.footerLink}>Privacidad</span>
+            <Link to="/condiciones-de-uso" className={styles.footerLink}>Condiciones de uso</Link>
+            <Link to="/privacidad" className={styles.footerLink}>Privacidad</Link>
           </div>
           <p className={styles.footerCopy}>© 2026 Priscila Nunes. Todos los derechos reservados.</p>
         </div>

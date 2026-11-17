@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import LoginForm from '../components/LoginForm'
 import RegisterForm from '../components/RegisterForm'
 import ContactForm from '../components/ContactForm'
@@ -133,8 +134,8 @@ function AuthPage() {
           <div className={styles.footerLinks}>
             <a href="#sobre-nosotros" className={styles.footerLink}>Sobre nosotros</a>
             <a href="#contacto" className={styles.footerLink}>Contacto</a>
-            <span className={styles.footerLink}>Condiciones de uso</span>
-            <span className={styles.footerLink}>Privacidad</span>
+            <Link to="/condiciones-de-uso" className={styles.footerLink}>Condiciones de uso</Link>
+            <Link to="/privacidad" className={styles.footerLink}>Privacidad</Link>
           </div>
           <p className={styles.footerCopy}>© 2026 Priscila Nunes. Todos los derechos reservados.</p>
         </div>

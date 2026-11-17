@@ -4,6 +4,7 @@ import AuthPage from './pages/AuthPage'
 import Dashboard from './pages/Dashboard'
 import ViajePage from './pages/ViajePage'
 import PerfilPage from './pages/PerfilPage'
+import LegalPage from './pages/LegalPage'
 import MapaPOI from './components/MapaPOI'
 
 function RutaProtegida({ children }) {
@@ -18,6 +19,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<AuthPage />} />
+        <Route path="/condiciones-de-uso" element={<LegalPage tipo="condiciones" />} />
+        <Route path="/privacidad" element={<LegalPage tipo="privacidad" />} />
         <Route path="/dashboard" element={
           <RutaProtegida>
             <Dashboard />

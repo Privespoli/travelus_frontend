@@ -1,0 +1,145 @@
+.pagina {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f7f7fb;
+  color: #24243a;
+}
+
+.header {
+  min-height: 68px;
+  padding: 12px clamp(20px, 6vw, 72px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #fff;
+  border-bottom: 1px solid #ececf1;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #1a3a5c;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.logo img { object-fit: contain; }
+
+.volver {
+  color: #6c54ba;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.volver:hover, .footer a:hover { text-decoration: underline; }
+
+.contenido {
+  width: min(100% - 32px, 900px);
+  margin: 40px auto 56px;
+  flex: 1;
+}
+
+.documento {
+  padding: clamp(24px, 5vw, 56px);
+  background: #fff;
+  border: 1px solid #e8e7ed;
+  border-radius: 22px;
+  box-shadow: 0 12px 36px rgba(25, 24, 46, 0.06);
+}
+
+.etiqueta {
+  margin: 0 0 10px;
+  color: #e8624a;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.documento h1 {
+  margin: 0;
+  color: #1e1d32;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  line-height: 1.15;
+}
+
+.intro {
+  max-width: 720px;
+  margin: 18px 0 10px;
+  color: #5f6070;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.fecha {
+  margin: 0 0 34px;
+  color: #9293a0;
+  font-size: 0.85rem;
+}
+
+.seccion {
+  padding: 22px 0;
+  border-top: 1px solid #eeeef2;
+}
+
+.seccion h2 {
+  margin: 0 0 12px;
+  color: #25243a;
+  font-size: 1.17rem;
+  font-weight: 700;
+}
+
+.seccion p, .seccion li {
+  color: #555666;
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+.seccion p + p { margin-top: 12px; }
+.seccion ul { margin: 0; padding-left: 22px; }
+.seccion li + li { margin-top: 8px; }
+.seccion a { color: #684bb1; }
+
+.pendiente {
+  padding: 12px 14px;
+  border-left: 3px solid #f0a020;
+  border-radius: 4px;
+  background: #fff8eb;
+  color: #775513 !important;
+  font-size: 0.9rem !important;
+}
+
+.enlaceContacto {
+  display: inline-flex;
+  margin-top: 22px;
+  color: #684bb1;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer {
+  padding: 24px clamp(20px, 6vw, 72px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  background: #1a1a2e;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 0.85rem;
+}
+
+.footer nav { display: flex; gap: 22px; flex-wrap: wrap; }
+.footer a { color: rgba(255, 255, 255, 0.78); text-decoration: none; }
+
+@media (max-width: 600px) {
+  .header { min-height: 60px; }
+  .contenido { margin: 20px auto 32px; }
+  .documento { border-radius: 16px; }
+  .footer { justify-content: center; text-align: center; }
+  .footer nav { justify-content: center; }
+}

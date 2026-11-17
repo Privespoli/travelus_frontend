@@ -1,280 +1,178 @@
-# ✈️ Travelus
+# ✈️ Travel Us
 
-> Aplicación web para la gestión de viajes en grupo. Organiza, comparte y planifica tus viajes con tus compañeros de aventura.
+Aplicación web para planificar viajes en grupo y coordinar la información del viaje en un solo lugar.
 
-![Travelus](https://img.shields.io/badge/status-producción-brightgreen) ![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js) ![React](https://img.shields.io/badge/React-Vite-61DAFB?logo=react) ![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E?logo=supabase) ![Vercel](https://img.shields.io/badge/Frontend-Vercel-black?logo=vercel) ![Render](https://img.shields.io/badge/Backend-Render-46E3B7?logo=render)
+🌐 **Aplicación:** [travelus-pri.vercel.app](https://travelus-pri.vercel.app)  
+🔌 **API:** [travelus-backend.onrender.com](https://travelus-backend.onrender.com)
 
-🌐 **Demo en vivo:** [travelus-frontend.vercel.app](https://travelus-frontend.vercel.app)
+## Sobre el proyecto
 
----
+Travel Us es una aplicación fullstack. El frontend presenta las páginas y los módulos de cada viaje; el backend expone una API para autenticar solicitudes y gestionar los datos. Supabase proporciona autenticación, base de datos PostgreSQL y almacenamiento de archivos.
 
-## 📋 Tabla de contenidos
+## Funcionalidades
 
-- [Sobre el proyecto](#sobre-el-proyecto)
-- [Funcionalidades](#funcionalidades)
-- [Permisos por rol](#permisos-por-rol)
-- [Stack tecnológico](#stack-tecnológico)
-- [Arquitectura](#arquitectura)
-- [Instalación](#instalación)
-- [Variables de entorno](#variables-de-entorno)
-- [Estructura del proyecto](#estructura-del-proyecto)
-- [Base de datos](#base-de-datos)
-- [Deploy](#deploy)
-- [Equipo](#equipo)
+### Cuenta y perfil
+- Registro e inicio de sesión con correo y contraseña.
+- Confirmación de correo y solicitud de recuperación de contraseña.
+- Cierre de sesión y rutas privadas para las áreas que requieren una cuenta.
+- Perfil con fotografía, información personal y perfiles dependientes.
 
----
+### Viajes
+- Panel con las viajes disponibles para la cuenta.
+- Crear viajes con nombre, destino, fechas e imagen.
+- Consultar y actualizar el estado y las fechas de un viaje.
+- Añadir integrantes por correo.
 
-## 🌍 Sobre el proyecto
+### Herramientas de viaje
+- Itinerario con lugares, dirección, fecha y hora.
+- Sugerir puntos de interés, votar y añadirlos al itinerario.
+- Subir y consultar tickets y documentos.
+- Registrar gastos, indicar quién pagó, seleccionar quién comparte el gasto y adjuntar comprobantes.
+- Crear checklists e ítems marcables, y añadir notas.
+- Guardar enlaces y enviar/responder mensajes.
 
-Travelus es una aplicación fullstack desarrollada como proyecto final de bootcamp. Permite a los usuarios crear viajes, invitar a otros participantes y gestionar toda la información del viaje de forma colaborativa: tickets, documentos, itinerario, puntos de interés y mucho más.
+### Contacto e información
+- Formulario de contacto conectado con EmailJS.
+- Páginas de condiciones de uso y privacidad.
 
----
+## Tecnologías
 
-## ✨ Funcionalidades
+| Capa | Tecnologías |
+| --- | --- |
+| Frontend | React 19, JavaScript, JSX y React Router 7 |
+| Desarrollo y build | Vite 8 |
+| Estilos | CSS y CSS Modules |
+| Cliente HTTP | Axios |
+| Autenticación, datos y archivos | API Express conectada a Supabase |
+| Correo de contacto | EmailJS Browser SDK |
+| Despliegue | Vercel (frontend) y Render (API) |
 
-### Autenticación
-- Registro e inicio de sesión con email y contraseña (Supabase Auth)
-- Rutas protegidas — solo usuarios autenticados acceden al dashboard
-- Cierre de sesión
-- Interceptor de respuesta — redirige al login automáticamente si el token expira (401)
+## Arquitectura
 
-### Dashboard
-- Vista de todos los viajes donde el usuario es **titular** o **integrante**
-- Badge visual que distingue el rol en cada viaje
-- Creación de nuevos viajes con imagen, destino y fechas
-- Cambio de estado del viaje (Planificación / En curso / Finalizado) — solo el titular
+```text
+Navegador
+  ├── Frontend React + Vite (Vercel)
+  ├── Axios → API Node.js + Express (Render), con token Bearer
+  └── EmailJS → servicio de correo del formulario de contacto
 
-### Gestión del viaje
-- **Integrantes** — añadir por email, ver lista con nombres, eliminar (solo titular)
-- **Tickets & Docs** — subir PDF e imágenes con título, lugar y fecha; eliminar (titular y integrantes)
-- **Itinerario** — gestión de actividades por día, data y hora en orden cronológica, añadir y quitar informaciones (titular)
-- **Mapa & POI** — puntos de interés con votación y visualización en mapa, añadir punto de interés, añadir POI al itinerário (integrantes y titular)
-
-### Perfil de usuario
-- Foto de perfil, nombre y teléfono
-- El nombre se muestra en el header del dashboard y en la lista de integrantes de cada viaje
-
-### Formulario de contacto
-- Integrado en la landing page
-- Envío de emails via EmailJS sin necesidad de backend
-
----
-
-## 🔑 Permisos por rol
-
-| Acción | Titular | Integrante |
-|--------|---------|------------|
-| Ver viajes en el dashboard | ✅ | ✅ |
-| Crear viaje | ✅ | ❌ |
-| Cambiar estado del viaje | ✅ | ❌ |
-| Ver integrantes | ✅ | ✅ |
-| Añadir integrantes | ✅ | ❌ |
-| Eliminar integrantes | ✅ | ❌ |
-| Ver tickets y documentos | ✅ | ✅ |
-| Subir tickets y documentos | ✅ | ✅ |
-| Eliminar tickets y documentos | ✅ | ❌ |
-| Ver itinerario | ✅ | ✅ |
-| Gestionar itinerario | ✅ | ❌ |
-| Ver mapa y POI | ✅ | ✅ |
-| Añadir puntos de interés | ✅ | ✅ |
-| Votar puntos de interés | ✅ | ✅ |
-| Eliminar puntos de interés | ✅ | ❌ |
-| Editar perfil propio | ✅ | ✅ |
-
----
-
-## 🛠️ Stack tecnológico
-
-| Capa | Tecnología |
-|------|-----------|
-| Frontend | React + Vite |
-| Backend | Node.js + Express |
-| Base de datos | Supabase (PostgreSQL) |
-| Autenticación | Supabase Auth |
-| Storage | Supabase Storage |
-| Email | EmailJS |
-| Deploy frontend | Vercel |
-| Deploy backend | Render |
-| Control de versiones | Git + GitHub |
-
----
-
-## 🏗️ Arquitectura
-
-```
-Cliente (React + Vite) — Vercel
-        ↓ HTTP requests con JWT
-Servidor (Node.js + Express) — Render
-        ↓ supabaseAdmin (service key)
-Supabase (PostgreSQL + Storage + Auth)
+API Express → Supabase Auth, PostgreSQL y Storage
 ```
 
-El backend actúa como intermediario entre el frontend y Supabase, usando la **service key** para saltarse las políticas RLS y tener control total sobre los datos.
+El cliente Axios se define en `src/api.js`. Usa `VITE_API_URL` como URL base; si no existe, utiliza la URL de producción. Adjunta el token de sesión a las solicitudes y, ante una respuesta HTTP 401, limpia la sesión y vuelve al inicio.
 
----
+## Requisitos
 
-## 🚀 Instalación
+- Node.js **20.19+ o 22.12+** (requisito de Vite 8).
+- npm.
+- Un proyecto Supabase configurado para el backend.
 
-### Requisitos previos
-- Node.js v18+
-- Cuenta en Supabase
-- Cuenta en EmailJS
+## Ejecutar en local
 
-### Backend
+El backend y el frontend se ejecutan en terminales separadas. Los comandos siguientes usan los repositorios de GitHub actuales.
+
+### 1. Iniciar el backend
 
 ```bash
 git clone https://github.com/Privespoli/travelus_backend.git
 cd travelus_backend
 npm install
-cp .env.example .env
+```
+
+Crea un archivo `.env` en la raíz del backend con la configuración de tu proyecto Supabase:
+
+```env
+PORT=3000
+FRONTEND_URL=http://localhost:5173
+SUPABASE_URL=<URL del proyecto Supabase>
+SUPABASE_ANON_KEY=<clave anon o publishable>
+SUPABASE_SERVICE_KEY=<clave privilegiada, solo en el servidor>
+```
+
+El repositorio backend no contiene `.env.example`, así que crea el archivo localmente. Después inicia la API:
+
+```bash
 npm run dev
 ```
 
-### Frontend
+La API local queda normalmente en `http://localhost:3000`. Puedes abrir `http://localhost:3000/` para comprobar que responde.
+
+### 2. Iniciar el frontend
+
+Abre otra terminal:
 
 ```bash
 git clone https://github.com/Privespoli/travelus_frontend.git
 cd travelus_frontend
 npm install
+```
+
+Crea `.env.local` en la raíz del frontend para conectar con la API local:
+
+```env
+VITE_API_URL=http://localhost:3000
+```
+
+Inicia Vite:
+
+```bash
 npm run dev
 ```
 
----
+Abre la URL que muestre la terminal, habitualmente `http://localhost:5173`. Detén los servidores con `Ctrl+C`.
 
-## 🔐 Variables de entorno
+## Scripts del frontend
 
-### Backend — `.env`
+| Comando | Descripción |
+| --- | --- |
+| `npm run dev` | Inicia Vite en modo desarrollo. |
+| `npm run build` | Genera los archivos optimizados en `dist/`. |
+| `npm run preview` | Previsualiza el build localmente; ejecuta primero `npm run build`. |
+| `npm run lint` | Ejecuta ESLint. |
 
-```env
-SUPABASE_URL=https://tu-proyecto.supabase.co
-SUPABASE_ANON_KEY=tu_anon_key
-SUPABASE_SERVICE_KEY=tu_service_role_key
-PORT=3000
+El frontend no tiene actualmente un script de pruebas automatizadas.
+
+## Variables de entorno del frontend
+
+| Variable | Uso |
+| --- | --- |
+| `VITE_API_URL` | URL base de la API. Para desarrollo local: `http://localhost:3000`. |
+| `VITE_SUPABASE_URL` | Referenciada en `LoginForm.jsx`, pero el login activo se realiza a través de la API. |
+| `VITE_SUPABASE_ANON_KEY` | Referenciada en `LoginForm.jsx`, pero el login activo se realiza a través de la API. |
+
+El formulario de contacto configura EmailJS en `src/components/ContactForm.jsx`. Los valores `VITE_*` y la configuración que se envía al navegador son visibles para el usuario; no incluyas claves privadas ni credenciales de servidor en el frontend. Mantén los secretos de Supabase solo en el backend.
+
+Los archivos `.env`, `.env.*` y `*.local` están ignorados por Git en este repositorio.
+
+## Rutas de la aplicación
+
+| Ruta | Acceso | Página |
+| --- | --- | --- |
+| `/` | Pública | Acceso y registro. |
+| `/condiciones-de-uso` | Pública | Condiciones de uso. |
+| `/privacidad` | Pública | Privacidad. |
+| `/dashboard` | Con sesión | Panel de viajes. |
+| `/viaje/:id` | Con sesión | Módulos de un viaje. |
+| `/viaje/:id/mapa` | Con sesión | Puntos de interés. |
+| `/perfil` | Con sesión | Perfil. |
+
+`vercel.json` reescribe las rutas de la aplicación hacia `index.html`, necesario para que las rutas del navegador funcionen al recargar una página.
+
+## Estructura principal
+
+```text
+src/
+├── main.jsx                  # Entrada de React
+├── App.jsx                   # Rutas públicas y protegidas
+├── api.js                    # Cliente Axios e interceptores
+├── context/AuthContext.jsx   # Estado de autenticación
+├── pages/                    # Acceso, panel, perfil, viaje y legales
+└── components/               # Módulos de viajes y contacto
 ```
 
-### Frontend
+## Despliegue
 
-Las credenciales de EmailJS están configuradas en el componente `ContactForm.jsx`.
+El frontend está publicado en Vercel. La URL principal configurada es `https://travelus-pri.vercel.app`. El backend está publicado en Render en `https://travelus-backend.onrender.com`. La API permite el origen del frontend principal y los puertos locales 5173 a 5176, según la configuración actual de CORS.
 
----
+## Autora
 
-## 📁 Estructura del proyecto
-
-### Backend
-```
-travelus_backend/
-├── index.js
-└── src/
-    ├── controllers/
-    │   ├── authController.js
-    │   ├── viajesController.js
-    │   ├── integrantesController.js
-    │   ├── documentosController.js
-    │   ├── perfilController.js
-    │   ├── itinerarioController.js
-    │   └── poiController.js
-    ├── routes/
-    │   ├── authRoutes.js
-    │   ├── viajesRoutes.js
-    │   ├── integrantesRoutes.js
-    │   ├── documentosRoutes.js
-    │   ├── perfilRoutes.js
-    │   ├── itinerarioRoutes.js
-    │   └── poiRoutes.js
-    ├── middleware/
-    │   ├── authMiddleware.js
-    │   └── uploadMiddleware.js
-    └── supabaseClient.js
-```
-
-### Frontend
-```
-travelus_frontend/
-└── src/
-    ├── pages/
-    │   ├── AuthPage.jsx
-    │   ├── Dashboard.jsx
-    │   ├── ViajePage.jsx
-    │   └── PerfilPage.jsx
-    ├── components/
-    │   ├── LoginForm.jsx
-    │   ├── RegisterForm.jsx
-    │   ├── ViajeCard.jsx
-    │   ├── CrearViajeModal.jsx
-    │   ├── Integrantes.jsx
-    │   ├── TicketsYDocs.jsx
-    │   ├── Perfil.jsx
-    │   ├── ContactForm.jsx
-    │   ├── Itinerario.jsx
-    │   └── MapaPOI.jsx
-    ├── context/
-    │   └── AuthContext.jsx
-    └── api.js
-```
-
----
-
-## 🗄️ Base de datos
-
-### Tablas
-
-| Tabla | Descripción |
-|-------|-------------|
-| `viajes` | Viajes creados por los usuarios |
-| `integrantes` | Relación usuario-viaje con rol |
-| `documentos` | Tickets y documentos subidos por viaje |
-| `perfiles` | Nombre, teléfono y foto de cada usuario |
-| `itinerarios` | Nombre, dirección, fecha y hora de cada local añadido en el itinerario |
-| `lugares_poi` | Nombre y descripición cada local añadido en el POI |
-| `votos_poi` | registro de voto unico por id |
-
-### Storage buckets
-
-| Bucket | Contenido |
-|--------|-----------|
-| `imagenes-viajes` | Portadas de los viajes |
-| `documentos` | PDFs e imágenes de tickets |
-| `avatares` | Fotos de perfil de usuarios |
-
-### Seguridad
-
-Todas las tablas tienen **Row Level Security (RLS)** activado en Supabase. El backend usa la `service_role key` a través de `supabaseAdmin` para saltarse las políticas RLS y garantizar el control de acceso desde el servidor.
-
----
-
-## 🌐 Deploy
-
-| Servicio | Plataforma | URL |
-|---------|-----------|-----|
-| Frontend | Vercel | [travelus-frontend.vercel.app](https://travelus-frontend.vercel.app) |
-| Backend | Render | [travelus-backend.onrender.com](https://travelus-backend.onrender.com) |
-
-> **Nota:** El backend usa el plan gratuito de Render, que se "duerme" tras 15 minutos de inactividad. El primer request puede tardar ~50 segundos en responder.
-
----
-
-## 👩‍💻 Equipo
-
-| Desarrolladora | Áreas |
-|---------------|-------|
-| **Melina Rivera** | Backend (auth, viajes, integrantes, documentos, perfil), frontend (dashboard, tickets & docs, perfil, contacto), base de datos, interceptores HTTP, deploy |
-| **Priscila Nunes** | Backend (registro, itinerario, mapa & POI, votación), frontend (itinerario, mapa & POI), diseño visual, paleta de colores, cursor personalizado |
-
----
-
-## 📄 Licencia
-
-### © 2026 Priscila Nunes & Melina Rivera. Todos los derechos reservados.
-
-Este proyecto es **software propietario**. El código fuente se comparte públicamente con fines de **exhibición y portfolio personal** únicamente.
-
-**Queda estrictamente prohibido**, sin autorización escrita y expresa de las autoras:
-
-- Clonar, copiar o descargar este repositorio con fines distintos a la visualización.
-- Distribuir, sublicensiar o vender el código, en su totalidad o en parte.
-- Usar este proyecto como base para otros proyectos, ya sean personales o comerciales.
-- Modificar, descompilar o crear obras derivadas a partir de este código.
-
-Para solicitar permisos de uso o colaboración: [@melinarivera](https://github.com/melinarivera) · [@Privespoli](https://github.com/Privespoli)
-
-> El hecho de que este repositorio sea público **no implica** que se otorgue ningún tipo de licencia de uso, copia o distribución.
+Priscila Nunes.

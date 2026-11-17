@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from 'react-router-dom'
+import { Link, useParams, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { useAuth } from '../context/AuthContext'
 import Integrantes from '../components/Integrantes'
@@ -100,8 +100,8 @@ function ViajePage() {
           <div className={styles.footerLinks}>
             <span className={styles.footerLink}>Sobre nosotros</span>
             <span className={styles.footerLink}>Contacto</span>
-            <span className={styles.footerLink}>Condiciones de uso</span>
-            <span className={styles.footerLink}>Privacidad</span>
+            <Link to="/condiciones-de-uso" className={styles.footerLink}>Condiciones de uso</Link>
+            <Link to="/privacidad" className={styles.footerLink}>Privacidad</Link>
           </div>
           <p className={styles.footerCopy}>© 2026 Priscila Nunes. Todos los derechos reservados.</p>
         </div>
