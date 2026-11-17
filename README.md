@@ -5,9 +5,13 @@ Aplicación web para planificar viajes en grupo y coordinar la información del 
 🌐 **Aplicación:** [travelus-pri.vercel.app](https://travelus-pri.vercel.app)  
 🔌 **API:** [travelus-backend.onrender.com](https://travelus-backend.onrender.com)
 
+<<<<<<< HEAD
 ![Vista general de Travel Us: viajes, documentos, itinerario y puntos de interés](docs/images/front.png)
 
 ![Vista general de Travel Us: viajes, documentos, itinerario y puntos de interés](docs/images/travelus-mosaic.png)
+=======
+![Pantalla de inicio de Travel Us](docs/images/front.png)
+>>>>>>> 5e7b3f4 (read me)
 
 ## Sobre el proyecto
 
@@ -22,7 +26,7 @@ Travel Us es una aplicación fullstack. El frontend presenta las páginas y los 
 - Perfil con fotografía, información personal y perfiles dependientes.
 
 ### Viajes
-- Panel con las viajes disponibles para la cuenta.
+- Panel con los viajes disponibles para la cuenta.
 - Crear viajes con nombre, destino, fechas e imagen.
 - Consultar y actualizar el estado y las fechas de un viaje.
 - Añadir integrantes por correo.
@@ -38,6 +42,10 @@ Travel Us es una aplicación fullstack. El frontend presenta las páginas y los 
 ### Contacto e información
 - Formulario de contacto conectado con EmailJS.
 - Páginas de condiciones de uso y privacidad.
+
+## Galería
+
+![Panel de viajes, documentos, itinerario y puntos de interés](docs/images/travelus-mosaic.png)
 
 ## Tecnologías
 
