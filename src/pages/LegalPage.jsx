@@ -10,7 +10,7 @@ const paginas = {
         titulo: '1. Titular y contacto',
         contenido: <>
           <p>Travel Us es un proyecto gestionado por Priscila Nunes. Para consultas sobre el servicio o estas condiciones, puedes escribir mediante el <a href="/#contacto">formulario de contacto</a>.</p>
-          <p className={styles.pendiente}>Antes de publicar: añadir la identidad legal completa de la persona o entidad responsable y su domicilio de contacto.</p>
+          {/* TODO: Añadir la identidad legal completa y el domicilio de contacto antes de publicar. */}
         </>,
       },
       {
@@ -47,7 +47,7 @@ const paginas = {
         titulo: '1. Responsable del tratamiento',
         contenido: <>
           <p>Responsable: Priscila Nunes, gestora de Travel Us. Puedes contactar mediante el <a href="/#contacto">formulario de contacto</a>.</p>
-          <p className={styles.pendiente}>Antes de publicar: confirmar la identidad legal completa, el domicilio y un medio de contacto directo de la responsable.</p>
+          {/* TODO: Confirmar la identidad legal completa, el domicilio y un medio de contacto directo de la responsable. */}
         </>,
       },
       {
@@ -77,14 +77,14 @@ const paginas = {
         titulo: '5. Quién puede recibir los datos',
         contenido: <>
           <p>Los datos pueden ser tratados por proveedores necesarios para operar la aplicación: Supabase (autenticación, base de datos y archivos), Render (servidor/API), Vercel (alojamiento web) y EmailJS junto con el proveedor de correo conectado para recibir mensajes del formulario. Las personas que participan en un viaje pueden ver el contenido compartido en ese viaje.</p>
-          <p className={styles.pendiente}>Antes de publicar: confirmar las ubicaciones de tratamiento, los acuerdos y las garantías de transferencia internacional aplicables a cada proveedor.</p>
+         {/* TODO: Confirmar las ubicaciones de tratamiento, los acuerdos y las garantías de transferencia internacional aplicables a cada proveedor. */}
         </>,
       },
       {
         titulo: '6. Conservación y eliminación',
         contenido: <>
           <p>Los datos se conservan mientras la cuenta y los viajes estén activos, y durante el tiempo adicional que exijan las obligaciones legales o la resolución de reclamaciones. Puedes solicitar la eliminación de tu cuenta y ejercer tus derechos mediante el contacto indicado arriba.</p>
-          <p className={styles.pendiente}>Antes de publicar: verificar que la baja de cuenta elimina también los datos de viajes y archivos almacenados, o explicar con precisión qué contenido compartido permanece y durante cuánto tiempo.</p>
+         {/* TODO: Verificar qué datos se eliminan al dar de baja la cuenta y durante cuánto tiempo se conserva el contenido compartido. */}
         </>,
       },
       {
